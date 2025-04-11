@@ -15,4 +15,6 @@ jobs:
       - name: List files in the repository
         run: |
           ls ${{ github.workspace }}
+          node --version
+          "node ${{ github.workspace }}/index.js"
       - run: echo "🍏 This job's status is ${{ job.status }}."
