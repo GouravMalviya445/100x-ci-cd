@@ -16,5 +16,5 @@ jobs:
         run: |
           ls ${{ github.workspace }}
           node --version
-          "node ${{ github.workspace }}/index.js"
+          node index.js
       - run: echo "🍏 This job's status is ${{ job.status }}."
