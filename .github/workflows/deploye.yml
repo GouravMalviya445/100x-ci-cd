@@ -15,10 +15,9 @@ jobs:
         uses: actions/checkout@v3
 
       - name: executing remote ssh commands using password
-        uses: appleboy/ssh-action@master
+        uses: appleboy/ssh-action@v1.0.0
         with: 
-          host: ${{ secrets.HOST }} #
-          username: ubuntu
+          host: ${{ secrets.HOST }}
+          username: ${{ secrets.USERNAME }}
           key: ${{ secrets.PRIVATE_SSH_KEY }}
-          port: 22
           script: whoami
